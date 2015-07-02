@@ -1,12 +1,9 @@
 <?php
-	session_start(); // Ready the system for passing info between pages.
 
-	echo "<!DOCTYPE html>\n";
-
-	include("functions.php");
-	
+	require_once("functions.php");
 	html_header('BATS - Main Menu','');
-	
+	session_check(); // Ready the system for passing info between pages.
+
 	echo "\t\t<h1 id=\"index-banner\">BATS - Main Menu</h1>\n";
 		
 	if (isset($_SESSION['username'])) {
@@ -34,9 +31,9 @@
 		</div>
 		</div>
 		
-		<div id=\"log-out\">
+		<div id="log-out">
 			<ul>
-				<li><a href="logout.php">Logged in as: <?php $_SESSION['username'] ?><br>Click here to logout.</a></li>
+				<li><a href="logout.php">Logged in as: <?php echo $_SESSION['username'] ?><br>Click here to logout.</a></li>
 			</ul>
 		</div>
 <?php

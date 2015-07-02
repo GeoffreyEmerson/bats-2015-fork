@@ -3,3 +3,9 @@ This is the README file for BATS (Basic Asset Tracking System) created by Geoffr
 BATS uses PHP and a PostgreSQL database to make tracking company assets easy and efficient. The work flow is designed from the ground up with the user in mind to make moves, adds, and decomissioning as easy as possible, so that there is no reason to allow your digital asset tracking to fall behind your real world deployment state.
 
 When the project is fully transferred to github, I will be adding a guide to set up the Postgres database and customize the PHP scripts to work for your setup.
+
+
+-Required database permissions-
+Each login user will need permissions such as the following:
+GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO testuser
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO testuser
